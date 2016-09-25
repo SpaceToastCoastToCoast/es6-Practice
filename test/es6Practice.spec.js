@@ -329,7 +329,7 @@ describe('default parameters make function parameters more flexible', () => {
 
   it('it is used when undefined is passed', function() {
     let number = (int = 23) => int;
-    const param = 42;
+    const param = undefined;
 
     assert.equal(number(param), 23);
   });
