@@ -129,7 +129,7 @@ describe('spread with arrays', () => {
   describe('used as function parameter', () => {
     it('prefix with `...` to spread as function params', function() {
       const magicNumbers = [1, 2];
-      const fn = (magicA, magicB) => {
+      const fn = ([magicA, magicB]) => {
         assert.deepEqual(magicNumbers[0], magicA);
         assert.deepEqual(magicNumbers[1], magicB);
       };
