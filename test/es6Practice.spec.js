@@ -482,11 +482,12 @@ describe('generator - `yield` is used to pause and resume a generator function',
 
     let secondItem;
     beforeEach(function() {
+      generator.next();
       secondItem = generator.next();
     });
 
     it('`value` is "world"', function() {
-      let {value} = secondItem;
+      let value = secondItem.value;
       assert.equal(value, 'world');
     });
 
