@@ -492,7 +492,7 @@ describe('generator - `yield` is used to pause and resume a generator function',
     });
 
     it('and `done` is still false', function() {
-      const done = secondItem;
+      const done = secondItem.done;
       assert.equal(done, false);
     });
   });
